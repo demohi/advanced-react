@@ -1,0 +1,24 @@
+{
+  "name": "advanced-react",
+  "version": "0.1.0",
+  "description": "advaced react book",
+  "scripts": {
+    "clean": "rimraf _book",
+    "build": "gitbook build -g demohi/advanced-react",
+    "watch": "gitbook serve",
+    "publish": "npm run clean && npm run build && cd _book && git init && git commit --allow-empty -m 'update book' && git checkout -b gh-pages && touch .nojekyll && git add . && git commit -am 'update book' && git push git@github.com:demohi/advanced-react gh-pages --force"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/demohi/advanced-react.git"
+  },
+  "author": "mdemo",
+  "bugs": {
+    "url": "https://github.com/demohi/advanced-react/issues"
+  },
+  "homepage": "https://github.com/demohi/advanced-react#readme",
+  "devDependencies": {
+    "gitbook-cli": "^0.3.4",
+    "rimraf": "^2.4.3"
+  }
+}
